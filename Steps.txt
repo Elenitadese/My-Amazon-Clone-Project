@@ -1,0 +1,147 @@
+``              backed steps
+*******************************************video 1 firebase set up********************************
+atep 0
+- we introduce authhentication
+-firebase is a google service that give service for authentication https://firebase.google.com/
+https://console.firebase.google.com/
+
+(A) Firebase
+
+Go to Firebase Console
+ → Add Project.
+
+                Enable:
+                Authentication → Email/Password
+                Firestore Database → Start in test mode
+                Copy your config keys (apiKey, authDomain, etc.) into FireBase.js.
+                In Payment.jsx and Order.jsx, the Firestore code will now save to your database.
+                build- authentication , firestore functions for depoly
+
+
+Step 1: Register your app in your Firebase project
+                    You'll do this in the Firebase console.
+                    Go to your Project settings (click the gear icon next to "Project overview").
+                    Scroll down to the "Your apps" section and click the "Web" icon (the </> symbol).
+                    Follow the prompts to register your app. You'll give it a nickname, and optionally set up Firebase Hosting if you                   haven't already.
+                    After registration, Firebase will provide you with a Firebase configuration object . This is a JavaScript object                    containing your project's unique identifiers, like API keys and project IDs. Keep this safe; you'll need it for the next                step!
+                    Step 4: Connect your app's codebase to Firebase
+                    This is where you'll bring that configuration into your actual web app code.
+        - Install the Firebase SDK: (e.g., npm install firebase ).
+        - Initialize Firebase: In your app's main JavaScript file, you'll import the necessary Firebase modules and then call firebase.initializeApp() using the configuration object you got from Step 3.
+
+    -npm install firebase
+    -Then, initialise Firebase and begin using the SDKs for the products that you'd like to use.
+    -in utility i create firebase.js and putted the abovee code but this it only to register
+
+step 2 - modifying the configration file firebase.js
+        import { getAuth } from "firebase/auth"; for authentication
+        import { getFirestore } from "firebase/firestore"; for 
+
+        // next steps  exporting 
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+
+
+///configration finished 
+// firebase.js
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+
+*******************************************video 2 Enabling firebase authentication********************************
+Authentication-signin method-(i use email and pasword then enable and add google also) so we continue building our pages 
+
+*******************************************video 3 Building Auth page ui********************************
+Auth folder also sign in and create account  so we rename to Auth.jsx
+we remove the layout rapper since we donot need  
+section>div*2 structure used and the ui build
+
+*******************************************video 4 Authentication functionality********************************
+we import auth, importuse state  3 states email error aand password
+******************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+npm install -g firebase-tools
+
+depoly
+firebase login
+firebase init
+firebase deploy
+3)in utility i create firebase.js

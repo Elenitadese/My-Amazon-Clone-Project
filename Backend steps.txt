@@ -1,0 +1,19 @@
+src/
+├── Components/          # Reusable components
+│   ├── Header/         # Navigation header
+│   ├── Product/        # Product display components
+│   ├── Layout/         # Main layout wrapper
+│   └── DataProvider/   # Global state management
+├── Pages/              # Different views/screens
+│   ├── Auth/          # Login/Signup
+│   ├── Cart/          # Shopping cart
+│   ├── Payment/       # Checkout process
+│   └── Orders/        # Order history
+├── Utility/           # Helper functions & config
+└── Api/              # API configuration
+Step 1: Set Up Firebase
+            -Create Firebase project
+            -Enable Authentication → Email/-Password
+            -Create Firestore Database → -Start in test mode
+            -Copy config to firebase.js
+Step 2: Backend Setup
