@@ -5,6 +5,7 @@ import ProductCard from '../../Components/Product/ProductCard';
 import CurrencyFormat from '../../Components/CurrencyFormat/CurrencyFormat';
 import { Link } from 'react-router-dom';
 import clsses from './Cart.module.css';
+
 import { Type } from '../../Utility/action.type';
 
 // up and down arrows to add and remove
