@@ -15,6 +15,7 @@ const Header = () => {
  const [{user,basket}, dispatch] = useContext(DataContext)
  const navigate = useNavigate();
  
+//  later we use in payment to count
  const totalItem = basket?.reduce((amount,item)=>{
   return item.amount + amount
  },0);
@@ -73,7 +74,7 @@ const Header = () => {
                 user?(
                   <>
                   <p>Hello, {user?.email?.split('@')[0]} </p>
-                  {/* <span onClick={()=>auth.signOut}>Sign Out</span> */}
+                  <span onClick={()=>auth.signOut()}>Sign Out</span>
                   <span
   onClick={() => {
     auth.signOut().then(() => {

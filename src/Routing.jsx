@@ -8,11 +8,16 @@ import Cart from './Pages/Cart/Cart'
 import Results from './Pages/Results/Results'
 import ProductDetail from './Pages/ProductDetail/ProductDetail'
 import ProtectedRoute from './Components/ProtectdRoute/ProtectedRoute'
+
+// this import comes on building payment page 
+// import { CheckoutProvider } from "@stripe/react-stripe-js/checkout";
 import { Elements } from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 
-const stripePromise = loadStripe
-('pk_test_51RWRZpCLscHmGgvyN8mIdxagkixu4DhcIWxaCaC0iE3tvZNseo0lZeZaieUlThSPWhhsBFV78JGowOrRruL1LNrQ00wwdkiSQc');
+// initialize by my stripe publick key 
+const stripePromise = loadStripe(
+  "pk_test_51SAs5pPYJB6msNLGmRyZRSslDBE6RW0dt2ldfAGwasN5sW4wt6WpOsJtTDfIITScfTVlNDlTPJYY8d1w2bUh64Cx00IF5aib19"
+);
 function Routing() {
   return (
     <Routes>
@@ -22,9 +27,11 @@ function Routing() {
         <ProtectedRoute
          msg={" you must log in to pay"} 
         redirect = {"/payments"} >
+    {/* wrap payment by element */}
   <Elements stripe={stripePromise}>
     <Payment />
   </Elements>
+
   </ProtectedRoute>
 } />
    

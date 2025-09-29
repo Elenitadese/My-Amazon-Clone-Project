@@ -17,3 +17,8 @@ Step 1: Set Up Firebase
             -Create Firestore Database → -Start in test mode
             -Copy config to firebase.js
 Step 2: Backend Setup
+
+
+
+usefull 
+usefull "client_secret": "pi_3SAzxcPYJB6msNLG2dkXxTz7_secret_HGrXLw5PKpN8njzvOWcpkG7Iq",

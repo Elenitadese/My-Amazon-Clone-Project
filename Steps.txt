@@ -71,6 +71,45 @@ section>div*2 structure used and the ui build
 
 *******************************************video 4 Authentication functionality********************************
 we import auth, importuse state  3 states email error aand password
+
+*******************************************video 5 setting up stripe for payment********************************
+stripe is finanacial payment gate way
+
+api key - used for front end in payment
+secrete key - used for backend in env file
+
+goes to firebase functions 
+
+https://firebase.google.com/docs/cli
+npm install -g firebase-tools or https://www.npmjs.com/package/firebase-cli
+
+npm list -g
+$ firebase --version
+14.17.0
+*******************************************video 5 setting up backend payment api using firebase function ********************************
+
+
+
+log in by terminal
+firebase login
+firebase init - and select ❯◉ Functions: Configure a Cloud Functions directory and   select  an existing project 
+its files
+, then we integrate express  cd functions to inter to functions folder then npm install express
+ npm i express cors stripe dotenv
+  then we set up  to run use this command npm run serve
+
+
+  usefull "client_secret": "pi_3SAzxcPYJB6msNLG2dkXxTz7_secret_HGrXLw5PKpN8njzvOWcpkG7Iq",
+
+firebase deploy
+3)in utility i create firebase.js
+
+*******************************************video factoring pay,ment ui  backend **************
+
+*******************************************video payment page ui **************
+ https://docs.stripe.com/sdks/stripejs-react
+
+ npm install --save @stripe/react-stripe-js @stripe/stripe-js
 ******************************************************************************************************************
 
 
@@ -138,10 +177,4 @@ we import auth, importuse state  3 states email error aand password
 
 
 
-npm install -g firebase-tools
-
-depoly
-firebase login
-firebase init
-firebase deploy
-3)in utility i create firebase.js
+1000094557047
